@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Roboto+Slab&display=swap');
+
+*{
+     font-family: 'Roboto Slab', serif; 
+    
+}
+.navbar-brand{
+     font-family: 'Lilita One', cursive;
+
+}
+.navbar{
+     background: rgb(22,70,118);
+     background: linear-gradient(90deg, rgba(22,70,118,1) 100%, rgba(120,94,224,1) 100%, rgba(36,129,207,1) 100%);}
+     
+     .nav.navbar-nav.navbar-right li a {
+          color: rgb(231, 231, 238);
+      }
+body,html{
+     height: 100%;
+     margin: 0; 
+}
+.bg{
+     /* background-image: url('https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/rm407-106-krv163o4.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=cff205e76815d718f0e656dbe01e8710');
+      */
+      background-image: url('https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/rm407-105-krv136tc.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=0386ca2d627685f919d682437032d890');
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center;
+     height: 100%; 
+}
+.center{
+      text-align: center;
+     color: aliceblue;
+     margin: auto;
+     justify-content: center;
+     display: block;
+     word-wrap: break-word;
+     word-spacing: normal; 
+     margin: 0;
+  
+
+}
+.glow {
+     font-size: 80px;
+     color: #fff;
+     text-align: center;
+     -webkit-animation: glow 1s ease-in-out infinite alternate;
+     -moz-animation: glow 1s ease-in-out infinite alternate;
+     animation: glow 1s ease-in-out infinite alternate;
+   }
+   
+   @-webkit-keyframes glow {
+     from {
+       text-shadow: 0 0 10px #fff, 0 0 10px #fff, 0 0 0px #f7f2f4, 0 0 10px #f8edf2, 0 0 10px #ecdde4, 0 0 10px #e299bd, 0 0 10px #fe99cc;
+     }
+     to {
+       text-shadow: 0 0 10px #fff, 0 0 12px #f8b9d8, 0 0 0px #eeebec, 0 0 12px #f3e1ea, 0 0 12px #f0e2e9, 0 0 12px #f09ec7, 0 0 12px #f0a1c8;
+     }
+   }
+   .footerpage{
+     display:inline-block;
+   }
+   .services{
+     background-color: red;
+   }
+   .About{
+     background-color: rgb(0, 204, 255);
+   }
+   .phoenixLabs{
+     background-color: rgb(0, 255, 162);
+   }
+   
