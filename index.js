@@ -4,7 +4,7 @@ function getCurrentURL() {
     return window.location.href;
 }
 const url = getCurrentURL();
-const pos = url.search("/login.html");
+const pos = url.search("/ailabs.html");
 function startVideo() {
     navigator.mediaDevices
         .getUserMedia({ video: {} })

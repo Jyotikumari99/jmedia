@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <style>
+          body {
+    background: #000;
+}
+
+.center-con {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.round {
+    position: relative;
+    border: 3px solid #fff;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+
+span {
+    z-index: 999;
+    height: 3px;
+    margin:1px;
+    width: 30px;
+    background: #fff;
+    transition: 0.4s ease;
+}
+
+span:first-child {
+    display: block;
+    position: absolute;
+    transform: rotate(45deg);
+    left: 25%;
+    bottom: 35%;
+}
+
+span:nth-child(2) {
+    display: block;
+    position: absolute;
+    transform: rotate(-45deg);
+    left: 45%;
+    bottom: 35%;
+}
+
+span:nth-child(3) {
+    display: block;
+    position: absolute;
+    transform: rotate(45deg);
+    left: 25%;
+    bottom: 54%;
+}
+
+span:nth-child(4) {
+    display: block;
+    position: absolute;
+    transform: rotate(-45deg);
+    left: 45%;
+    bottom: 54%;
+}
+
+.round:hover span:nth-child(1) {
+    transform: rotate(-135deg);
+}
+
+.round:hover span:nth-child(2) {
+    transform: rotate(135deg);
+}
+
+.round:hover span:nth-child(3) {
+    transform: rotate(225deg);
+}
+
+.round:hover span:nth-child(4) {
+    transform: rotate(-225deg);
+}
+section{
+     height: 100vh;
+     position: relative;
+}
+#section-l{
+     background-color: blue;
+}
+a#scroll-btn{
+     position:absolute;
+     height: 10em;
+     width: 6.25em;
+     border: 0.5em solid #ffffff;
+     margin: auto;
+     left: 0;
+     right: 0;
+     bottom: 6.25em;
+     border-radius: 3em;
+}
+a#scroll-btn:before{
+     position: absolute;
+     margin: auto;
+     left: 0;
+     right: 0;
+     content: "";
+     height: 1.2em;
+     width: 1.2em;
+     background-color: #ffffff;
+}
+     </style>
+</head>
+<body>
+     <div class="center-con">
+    
+          <div class="round">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+          </div>
+          
+      </div>
+      <section id="section-l">
+        <a href="" id="scroll-btn"></a>
+   </section>
+</body>
+</html>
