@@ -1,189 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>AI Labs</title>
+        <link rel="stylesheet" href="public/style.css" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css" />
+        <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    </head>
+    <style>
+        .art {
+            height: 20rem;
+            background-attachment: local;
+            background-image: url("/images/pexels-alex-knight-2599244.jpg");
+            background-position: 12px;
+        }
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="public/style.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
-  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css" />
-  <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+        .pages {
+            margin-bottom: 2rem;
+        }
 
-</head>
-<style>
-  .art {
-    height: 20rem;
-    background-attachment: local;
-    background-image: url("/images/pexels-alex-knight-2599244.jpg");
-    background-position: 12px;
-  }
+        .pages {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-top: -5rem;
+            margin-bottom: -2rem;
+        }
 
-  .pages {
-    margin-bottom: 2rem;
-  }
+        a {
+            text-decoration: none !important;
+        }
 
-  .pages {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-top: -5rem;
-    margin-bottom: -2rem;
+        .camera {
+            text-align: center;
+        }
 
-  }
+        .buttons {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 50%;
+        }
 
-  a {
-    text-decoration: none !important;
-    /* color: #fff !important; */
-  }
+        #video,
+        canvas {
+            background: #fff;
+            object-fit: cover;
+            width: 30%;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            box-shadow: 0 0 100px -50px #000;
+        }
 
-  .camera {
-    text-align: center;
-  }
+        @media screen and (max-width: 562px) {
+            #video,
+            canvas {
+                width: 80%;
+            }
+        }
+        .card {
+            border: 0;
+            box-shadow: 4px 0 10px #000000;
+            padding: 10px;
+        }
+    </style>
 
-  .buttons {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 50%;
-    margin-top: 2%;
-  }
+    <body>
+        <div class="contain">
+            <nav class="navbar navbar-expand-lg navbar-light bg-ligh fixed-top">
+                <div class="container-fluid">
+                    <img src="/images/ae7t5jjmcag2q1nka85llni40f.png" alt="" srcset="" />
+                    <a class="navbar-brand" href="#">Pheonix Labs</a>
 
-  #video,
-  canvas {
-    background: #fff;
-    object-fit: cover;
-    width: 40%;
-    aspect-ratio: 1/1;
-    border-radius: 50%;
-    box-shadow: 0 0 100px -50px #000;
-  }
-
-  @media screen and (max-width: 562px) {
-
-    #video,
-    canvas {
-      width: 80%;
-    }
-  }
-</style>
-
-<body>
-  <div class="contain">
-
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-ligh fixed-top">
-      <div class="container-fluid">
-        <img src="/images/ae7t5jjmcag2q1nka85llni40f.png" alt="" srcset="">
-        <a class="navbar-brand" href="#">Pheonix Labs</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg">
-            <li class="nav-item">
-              <a class="nav-link active " aria-current="page" href="/">Home</a>
-            </li>
-
-
-
-            <li class="nav-item">
-              <a class="nav-link active" href="#portfolio">Edge Case Testing</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="#portfolio"> Real-World Simulation</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="#portfolio">Benchmarking</a>
-            </li>
-
-            <!-- <li class="nav-item">
-                            <a class="nav-link active" href="#contacts">Contacts</a>
-                        </li> -->
-
-
-
-          </ul>
-
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="/">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="/art.html">Back</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <section class="art d-flex justify-content-center w-100">
+                <h1 class="w-75 text-center m-auto">AI Labs</h1>
+            </section>
         </div>
-      </div>
-    </nav>
-    <section class="art">
-      <h1>AI Labs</h1>
-    </section>
-
-  </div>
-  <div class="camera">
-    <video autoplay id="video" muted></video>
-  </div>
-  <div class="d-flex justify-content-center">
-    <div class="buttons">
-      <button class="btn btn-primary text-light"><a href="./index.html">Back</a></button>
-      <button class="btn btn-primary text-light" onclick="(e)=>e.preventDefault()">Login</button>
-    </div>
-  </div>
-  <main class="pages side">
-    <p>Welcome to our Artificial Intelligence Labs. It is here that we research and deploy complex workflows,
-      algorithms, and projects that can and will change our future. Our AI Labs Platform consists of three different
-      laboratories that were created to focus on real-world problems that require real-world solutions.</p>
-    <button type="button" class="btn btn-primary btn-lg"> <a style="color: aliceblue;text-decoration: none;"
-        href="/datac.html">Learn more</a> </button>
-    </div>
-
-  </main>
-
-  <div class="footer-dark">
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-6 col-md-3 item">
-            <h3>Services</h3>
-            <ul>
-              <li><a href="/art.html">Artificial Intelligence Center</a></li>
-              <li><a href="/crypto">Crypto Technology Center</a></li>
-              <li><a href="/web.html">Web/Mobile Application Suite</a></li>
-            </ul>
-          </div>
-          <div class="col-sm-7 col-md-3 item">
-            <h3>About</h3>
-            <ul>
-              <li><a href="#">Company</a></li>
-              <li><a href="#">Team</a></li>
-              <li><a href="#">Careers</a></li>
-            </ul>
-          </div>
-          <div class="col-md-6 item text">
-            <h3>Pheonix Labs</h3>
-            <p>At Phoenix Labs, we are curious, innovative, and bold. We are testing and exceeding the limitations of
-              what technology can do. We are a growing team of people with big ideas, who are both thinkers and doers.
-              Our people move quickly and thrive on working towards solutions to the problems that plague societies
-              across the globe..</p>
-          </div>
-          <div class="col item social"><a href="#"><i class="fa-brands fa-facebook"></i></a><a href="#"><i
-                class="fa-brands fa-twitter"></i></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a><a
-              href="#"><i class="fa-solid fa-envelope"></i></a></div>
+        <main class="m-4 p-4">
+            <div class="card">
+                <p class="text-justify w-75 m-auto fs-5">
+                    Welcome to our Artificial Intelligence Labs. It is here that we research and deploy complex workflows, algorithms, and projects that can and
+                    will change our future. Our AI Labs Platform consists of three different laboratories that were created to focus on real-world problems that
+                    require real-world solutions.
+                </p>
+                <div class="m-4 d-flex justify-content-center">
+                    <button type="button" class="btn btn-primary btn-lg">
+                        <a style="color: aliceblue; text-decoration: none" href="/datac.html">Learn more</a>
+                    </button>
+                </div>
+                <div class="camera">
+                    <video autoplay id="video" muted></video>
+                </div>
+                <div class="text-center fs-5 fw-bold">Align your face with camera for face recognition</div>
+                <div class="d-flex justify-content-center m-5">
+                    <div>
+                        <button class="btn btn-primary p-2" onclick="(e)=>e.preventDefault()">Login</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div class="footer-dark">
+            <footer>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-3 item">
+                            <h3>Services</h3>
+                            <ul>
+                                <li><a href="/art.html">Artificial Intelligence Center</a></li>
+                                <li><a href="/crypto">Crypto Technology Center</a></li>
+                                <li><a href="/web.html">Web/Mobile Application Suite</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-7 col-md-3 item">
+                            <h3>About</h3>
+                            <ul>
+                                <li><a href="#">Company</a></li>
+                                <li><a href="#">Team</a></li>
+                                <li><a href="#">Careers</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 item text">
+                            <h3>Pheonix Labs</h3>
+                            <p>
+                                At Phoenix Labs, we are curious, innovative, and bold. We are testing and exceeding the limitations of what technology can do.
+                                We are a growing team of people with big ideas, who are both thinkers and doers. Our people move quickly and thrive on working
+                                towards solutions to the problems that plague societies across the globe..
+                            </p>
+                        </div>
+                        <div class="col item social">
+                            <a href="#"><i class="fa-brands fa-facebook"></i></a><a href="#"><i class="fa-brands fa-twitter"></i></a
+                            ><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-solid fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <p class="copyright">Phoenix Labs©2023</p>
+                </div>
+            </footer>
         </div>
-        <p class="copyright">Phoenix Labs © 2023</p>
-      </div>
-    </footer>
-  </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
-    integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
-    integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
-    crossorigin="anonymous"></script>
-  <script src="https://kit.fontawesome.com/39aab1f952.js" crossorigin="anonymous"></script>
-  <script defer src="./face-api.min.js"></script>
-  <script defer src="./index.js"></script>
-</body>
-
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+            integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+            integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+            crossorigin="anonymous"
+        ></script>
+        <script src="https://kit.fontawesome.com/39aab1f952.js" crossorigin="anonymous"></script>
+        <script defer src="./face-api.min.js"></script>
+        <script defer src="./index.js"></script>
+    </body>
 </html>
