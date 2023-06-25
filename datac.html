@@ -1,309 +1,332 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Data Collection</title>
-        <link rel="stylesheet" href="public/style.css" />
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
-            crossorigin="anonymous"
-        />
-    </head>
-    <style>
-        body {
-            background-color: #d5d5d5;
-        }
-        .art {
-            height: 20rem;
-            background-attachment: local;
-            background-image: url("/images/pexels-lukas-590022.jpg");
-        }
-        .pages {
-            margin-bottom: 2rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            margin-top: -5rem;
-            height: 1500px;
-        }
-        .data {
-            width: 1200px;
-            height: fit-content;
-            overflow-y: scroll;
-            margin-top: 80px;
-            text-align: left;
-        }
-        .data::-webkit-scrollbar {
-            display: none;
-        }
-        #imageCollection {
-            background-image: url("./Images/imageCollecion.jpg");
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: 50vh;
-            color: #ffffff;
-            font-weight: 500;
-            text-shadow: 2px 0px 5px #000000;
-            text-align: justify;
-            border-radius: 12px;
-            box-shadow: 2px 0 10px #000000;
-        }
-        #preLabelled {
-            background-image: url("./Images/labelled.jpg");
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: 60vh;
-            color: #ffffff;
-            font-weight: 500;
-            text-shadow: 2px 0px 5px #000000;
-            text-align: justify;
-            border-radius: 12px;
-            box-shadow: 2px 0 10px #000000;
-        }
-        #pointOfInterest {
-            background-image: url("./Images/pointOfInterest.jpg");
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: 60vh;
-            color: #ffffff;
-            font-weight: 500;
-            text-shadow: 2px 0px 5px #000000;
-            text-align: justify;
-            background-position: center;
-            border-radius: 12px;
-            box-shadow: 2px 0 10px #000000;
-        }
-        #syntheticData {
-            background-image: url("./Images/synthetic.jpg");
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            height: 55vh;
-            color: #ffffff;
-            font-weight: 500;
-            text-shadow: 2px 0px 5px #000000;
-            text-align: justify;
-            border-radius: 12px;
-            box-shadow: 2px 0 10px #000000;
-        }
-    </style>
-    <body>
-        <div class="contain">
-            <nav class="navbar navbar-expand-lg navbar-light bg-ligh fixed-top">
-                <div class="container-fluid">
-                    <img src="/images/ae7t5jjmcag2q1nka85llni40f.png" alt="" srcset="" />
-                    <a class="navbar-brand" href="#">Pheonix Labs</a>
-                    <button
-                        class="navbar-toggler"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent"
-                        aria-controls="navbarSupportedContent"
-                        aria-expanded="false"
-                        aria-label="Toggle navigation"
-                    >
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="/">Home</a>
-                            </li>
 
-                            <div class="dropdown">
-                                <a
-                                    class="btn dropdown-toggle"
-                                    style="font-size: 1.2rem"
-                                    href="#imageCollection"
-                                    role="button"
-                                    id="dropdownMenuLink"
-                                    data-bs-toggle="dropdown"
-                                    aria-expanded="false"
-                                >
-                                    Image Collection
-                                </a>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Collection</title>
+  <link rel="stylesheet" href="public/style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+</head>
+<style>
+  body {
+    background-color: #d5d5d5;
+  }
 
-                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                    <li><a class="dropdown-item" href="#preLabelled">Pre-labeled Collection</a></li>
-                                </ul>
-                            </div>
-                            <div class="dropdown">
-                                <a
-                                    class="btn dropdown-toggle"
-                                    style="font-size: 1.2rem"
-                                    href="#pointOfInterest"
-                                    role="button"
-                                    id="dropdownMenuLink"
-                                    data-bs-toggle="dropdown"
-                                    aria-expanded="false"
-                                >
-                                    Point of Interest
-                                </a>
+  .art {
+    height: 20rem;
+    background-attachment: local;
+    background-image: url("/images/pexels-lukas-590022.jpg");
+  }
 
-                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                    <li><a class="dropdown-item" href="#syntheticData">Synthetic data</a></li>
-                                </ul>
-                            </div>
-                            <li class="nav-item">
-                                <a class="nav-link active" href="#portfolio">Projects</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-            <section class="art w-100 d-flex align-items-center">
-                <h1 class="w-75 m-auto text-center">Data Collection</h1>
-            </section>
+  .pages {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: -5rem;
+    height: 1500px;
+  }
+
+  .data {
+    width: 1200px;
+    height: fit-content;
+    overflow-y: scroll;
+    margin-top: 80px;
+    text-align: left;
+  }
+
+  .data::-webkit-scrollbar {
+    display: none;
+  }
+
+  #imageCollection {
+    background-image: url("./Images/datac.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+    color: #ffffff;
+    font-weight: 500;
+    text-shadow: 2px 0px 5px #000000;
+    text-align: justify;
+    border-radius: 12px;
+    box-shadow: 2px 0 10px #000000;
+    z-index: -1;
+  }
+
+  #preLabelled {
+    background-image: url("./Images/datac2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vh;
+    color: #ffffff;
+    font-weight: 500;
+    text-shadow: 2px 0px 5px #000000;
+    text-align: justify;
+    border-radius: 12px;
+    box-shadow: 2px 0 10px #000000;
+
+  }
+
+  #pointOfInterest {
+    background-image: url("./Images/datac3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vh;
+    color: #ffffff;
+    font-weight: 500;
+    text-shadow: 2px 0px 5px #000000;
+    text-align: justify;
+    background-position: center;
+    border-radius: 12px;
+    box-shadow: 2px 0 10px #000000;
+  }
+
+  #syntheticData {
+    background-image: url("./Images/synthetic.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 55vh;
+    color: #ffffff;
+    font-weight: 500;
+    text-shadow: 2px 0px 5px #000000;
+    text-align: justify;
+    border-radius: 12px;
+    box-shadow: 2px 0 10px #000000;
+  }
+</style>
+
+<body>
+  <div class="contain">
+    <nav class="navbar navbar-expand-lg navbar-light bg-ligh fixed-top">
+      <div class="container-fluid">
+        <img src="/images/ae7t5jjmcag2q1nka85llni40f.png" alt="" srcset="" />
+        <a class="navbar-brand" href="#">Pheonix Labs</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+
+            <div class="dropdown">
+              <a class="btn dropdown-toggle" style="font-size: 1.2rem" href="#imageCollection" role="button"
+                id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                Image Collection
+              </a>
+
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="#preLabelled">Pre-labeled Collection</a></li>
+              </ul>
+            </div>
+            <div class="dropdown">
+              <a class="btn dropdown-toggle" style="font-size: 1.2rem" href="#pointOfInterest" role="button"
+                id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                Point of Interest
+              </a>
+
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="#syntheticData">Synthetic data</a></li>
+              </ul>
+            </div>
+            <li class="nav-item">
+              <a class="nav-link active" href="#portfolio">Projects</a>
+            </li>
+          </ul>
         </div>
-        <main class="p-4">
-            <div class="m-4 p-3 align-items-center" id="imageCollection">
-                <h1 class="">Image Collection</h1>
-                <p class="m-0">
-                    Welcome to Phoenix Labs' Image Collection! We provide a comprehensive range of high-quality images for individuals, businesses, and
-                    organizations within our network. Our image collection is diverse and caters to various industries and use cases. Whether you need images
-                    for personal projects, marketing campaigns, research purposes, or any other application, we have you covered.
-                    <span class="d-block mt-2"></span>
-                    Our Data Collection Archives offer a vast selection of images sourced ethically from a variety of environments, including homes, studios,
-                    offices, vehicles, and public spaces. With a focus on quality and relevance, our curated image datasets ensure that you can find the perfect
-                    visuals to enhance your work.
-                    <span class="d-block mt-2"></span>
-                    By leveraging our State-Of-The-Art Digitally Managed Data Dispensary, accessing and downloading the images you need is seamless and
-                    efficient. Our user-friendly interface allows you to search, filter, and preview images, ensuring a smooth experience throughout the entire
-                    process. You can trust that our datasets are up-to-date, reliable, and compatible with any platform or application you are using.
-                    <span class="d-block mt-2"></span>
-                    Discover the possibilities of our Image Collection and unlock the power of visual data for your projects. From stunning landscapes to
-                    professional-grade product shots, our collection has it all. Join our network today and gain access to an extensive range of ethically
-                    sourced images that will take your creativity to new heights.
-                </p>
-            </div>
-            <div class="m-4 p-3" id="preLabelled">
-                <h1 class="mt-4">Pre-Labeled Collection</h1>
-                <p class="text-justify">
-                    Welcome to Phoenix Labs' Pre-Labeled Collection! We understand that labeling and categorizing data can be a time-consuming and challenging
-                    task. That's why we offer a specialized dataset designed to streamline your workflow and save you valuable time and resources.
-                    <span class="d-block mt-2"></span>
-                    Our Pre-Labeled Collection provides meticulously annotated data across various data types, including speech, text, image, and video. Each
-                    dataset is carefully labeled by our team of experts, ensuring accuracy and consistency. Whether you are training machine learning models,
-                    conducting research, or developing innovative applications, our pre-labeled datasets can significantly accelerate your progress.
-                    <span class="d-block mt-2"></span>
-                    By utilizing our Data Collection Archives, you gain access to a wide range of pre-labeled data that fits any use case. Our diverse
-                    collection covers multiple domains, allowing you to find datasets relevant to your specific needs. We prioritize ethical sourcing and adhere
-                    to strict quality standards, ensuring that our pre-labeled datasets provide reliable foundations for your projects. <br />
-                    <span class="d-block mt-2"></span>
-                    Accessing our Pre-Labeled Collection is simple and convenient through our State-Of-The-Art Digitally Managed Data Dispensary. Our intuitive
-                    interface allows you to browse, search, and download the labeled datasets you require with ease. Empower your AI systems, improve accuracy,
-                    and reduce development time with our comprehensive pre-labeled datasets.
-                    <span class="d-block mt-2"></span>
-                    Unlock the potential of pre-labeled data and revolutionize your projects with Phoenix Labs. Join our network today and discover how our
-                    Pre-Labeled Collection can supercharge your data-driven endeavors.
-                </p>
-            </div>
-            <div class="m-4 p-3" id="pointOfInterest">
-                <h1 class="mt-4">Point Of Interest</h1>
-                <p class="text-justify">
-                    Welcome to Phoenix Labs' Point Of Interest page! In our vast Data Collection Archives, we offer a specialized dataset that focuses on
-                    capturing points of interest across various environments. Whether you need data for navigation systems, location-based services, augmented
-                    reality applications, or urban planning, our Point Of Interest collection provides the information you need.
-                    <span class="d-block mt-2"></span>
-                    Our dataset encompasses detailed information about points of interest in homes, studios, offices, vehicles, and public spaces. From
-                    restaurants and landmarks to businesses and cultural attractions, our curated collection covers a broad range of categories. Each point of
-                    interest is precisely geo-tagged and supplemented with relevant metadata to ensure accuracy and usefulness.
-                    <span class="d-block mt-2"></span>
-                    With our State-Of-The-Art Digitally Managed Data Dispensary, accessing and utilizing our Point Of Interest dataset is a seamless experience.
-                    Our user-friendly platform allows you to explore and retrieve location-specific data with ease. Whether you're a developer, researcher, or
-                    business owner, our dataset offers valuable insights to enhance your projects and applications.
-                    <span class="d-block mt-2"></span>
-                    Join our network today and gain access to our comprehensive Point Of Interest collection. Empower your location-based services, optimize
-                    navigation algorithms, or enrich your applications with real-world data. Phoenix Labs is here to support your endeavors and help you make
-                    informed decisions using our ethically sourced and meticulously curated datasets.
-                </p>
-            </div>
-            <div class="m-4 p-3" id="syntheticData">
-                <h1 class="mt-4">Synthetic Data</h1>
-                <p class="text-justify">
-                    <span class="d-block mt-2"></span>
-                    Welcome to Phoenix Labs' Synthetic Data page! Our Synthetic Data collection provides a powerful resource for individuals, businesses, and
-                    organizations seeking versatile and customizable datasets. Synthetic data offers numerous advantages, including the ability to generate data
-                    that mimics real-world scenarios, while providing full control over its characteristics and distribution.
-                    <span class="d-block mt-2"></span>
-                    Our Synthetic Data collection covers various data types, including speech, text, image, and video. By leveraging our State-Of-The-Art
-                    Digitally Managed Data Dispensary, you can easily access and generate synthetic datasets tailored to your specific requirements. Whether
-                    you're training machine learning models, conducting simulations, or testing algorithms, our synthetic data empowers you to create realistic
-                    and scalable datasets.
-                    <span class="d-block mt-2"></span>
-                    At Phoenix Labs, we understand the importance of ethical and reliable data. Our synthetic data generation process adheres to rigorous
-                    quality standards, ensuring that the datasets we offer are accurate and representative of real-world scenarios. By utilizing our Synthetic
-                    Data collection, you can confidently drive innovation and advance your projects.
-                    <span class="d-block mt-2"></span>
-                    Join our network today and unlock the potential of synthetic data. With our cutting-edge tools and comprehensive collection, you can enhance
-                    your research, development, and testing processes. Experience the freedom and flexibility of working with synthetic data, backed by Phoenix
-                    Labs' commitment to delivering high-quality datasets for any use case.
-                </p>
-            </div>
-            <div class="p-4 d-flex justify-content-evenly">
-                <button type="button" class="btn btn-primary btn-lg m-auto">
-                    <a style="color: aliceblue; text-decoration: none" href="/art.html">Back</a>
-                </button>
-                <button type="button" class="btn btn-primary btn-lg m-auto">
-                    <a style="color: aliceblue; text-decoration: none" href="/datac.html">Enroll now</a>
-                </button>
-            </div>
-        </main>
-        <div class="footer-dark">
-            <footer>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-6 col-md-3 item">
-                            <h3>Services</h3>
-                            <ul>
-                                <li><a href="/art.html">Artificial Intelligence Center</a></li>
-                                <li><a href="/crypto">Crypto Technology Center</a></li>
-                                <li><a href="/web.html">Web/Mobile Application Suite</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-sm-7 col-md-3 item">
-                            <h3>About</h3>
-                            <ul>
-                                <li><a href="#">Company</a></li>
-                                <li><a href="#">Team</a></li>
-                                <li><a href="#">Careers</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-md-6 item text">
-                            <h3>Pheonix Labs</h3>
-                            <p>
-                                At Phoenix Labs, we are curious, innovative, and bold. We are testing and exceeding the limitations of what technology can do.
-                                We are a growing team of people with big ideas, who are both thinkers and doers. Our people move quickly and thrive on working
-                                towards solutions to the problems that plague societies across the globe..
-                            </p>
-                        </div>
-                        <div class="col item social">
-                            <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                            <a href="#"><i class="fa-brands fa-twitter"></i> </a>
-                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="#"><i class="fa-solid fa-envelope"></i></a>
-                        </div>
-                    </div>
-                    <p class="copyright">Phoenix Labs © 2023</p>
-                </div>
-            </footer>
+      </div>
+    </nav>
+    <section class="art w-100 d-flex align-items-center">
+      <h1 class="w-75 m-auto text-center">Data Collection</h1>
+    </section>
+  </div>
+  <main class="p-4">
+    <div class="m-4 p-3 align-items-center" id="imageCollection">
+      <h1 class="">Image Collection</h1>
+      <p class="m-0">
+        Welcome to Phoenix Labs' Image Collection! We provide a comprehensive range of high-quality images for
+        individuals, businesses, and
+        organizations within our network. Our image collection is diverse and caters to various industries and use
+        cases. Whether you need images
+        for personal projects, marketing campaigns, research purposes, or any other application, we have you covered.
+        <span class="d-block mt-2"></span>
+        Our Data Collection Archives offer a vast selection of images sourced ethically from a variety of environments,
+        including homes, studios,
+        offices, vehicles, and public spaces. With a focus on quality and relevance, our curated image datasets ensure
+        that you can find the perfect
+        visuals to enhance your work.
+        <span class="d-block mt-2"></span>
+        By leveraging our State-Of-The-Art Digitally Managed Data Dispensary, accessing and downloading the images you
+        need is seamless and
+        efficient. Our user-friendly interface allows you to search, filter, and preview images, ensuring a smooth
+        experience throughout the entire
+        process. You can trust that our datasets are up-to-date, reliable, and compatible with any platform or
+        application you are using.
+        <span class="d-block mt-2"></span>
+        Discover the possibilities of our Image Collection and unlock the power of visual data for your projects. From
+        stunning landscapes to
+        professional-grade product shots, our collection has it all. Join our network today and gain access to an
+        extensive range of ethically
+        sourced images that will take your creativity to new heights.
+      </p>
+    </div>
+    <div class="m-4 p-3" id="preLabelled">
+      <h1 class="mt-4">Pre-Labeled Collection</h1>
+      <p class="text-justify">
+        Welcome to Phoenix Labs' Pre-Labeled Collection! We understand that labeling and categorizing data can be a
+        time-consuming and challenging
+        task. That's why we offer a specialized dataset designed to streamline your workflow and save you valuable time
+        and resources.
+        <span class="d-block mt-2"></span>
+        Our Pre-Labeled Collection provides meticulously annotated data across various data types, including speech,
+        text, image, and video. Each
+        dataset is carefully labeled by our team of experts, ensuring accuracy and consistency. Whether you are training
+        machine learning models,
+        conducting research, or developing innovative applications, our pre-labeled datasets can significantly
+        accelerate your progress.
+        <span class="d-block mt-2"></span>
+        By utilizing our Data Collection Archives, you gain access to a wide range of pre-labeled data that fits any use
+        case. Our diverse
+        collection covers multiple domains, allowing you to find datasets relevant to your specific needs. We prioritize
+        ethical sourcing and adhere
+        to strict quality standards, ensuring that our pre-labeled datasets provide reliable foundations for your
+        projects. <br />
+        <span class="d-block mt-2"></span>
+        Accessing our Pre-Labeled Collection is simple and convenient through our State-Of-The-Art Digitally Managed
+        Data Dispensary. Our intuitive
+        interface allows you to browse, search, and download the labeled datasets you require with ease. Empower your AI
+        systems, improve accuracy,
+        and reduce development time with our comprehensive pre-labeled datasets.
+        <span class="d-block mt-2"></span>
+        Unlock the potential of pre-labeled data and revolutionize your projects with Phoenix Labs. Join our network
+        today and discover how our
+        Pre-Labeled Collection can supercharge your data-driven endeavors.
+      </p>
+    </div>
+    <div class="m-4 p-3" id="pointOfInterest">
+      <h1 class="mt-4">Point Of Interest</h1>
+      <p class="text-justify">
+        Welcome to Phoenix Labs' Point Of Interest page! In our vast Data Collection Archives, we offer a specialized
+        dataset that focuses on
+        capturing points of interest across various environments. Whether you need data for navigation systems,
+        location-based services, augmented
+        reality applications, or urban planning, our Point Of Interest collection provides the information you need.
+        <span class="d-block mt-2"></span>
+        Our dataset encompasses detailed information about points of interest in homes, studios, offices, vehicles, and
+        public spaces. From
+        restaurants and landmarks to businesses and cultural attractions, our curated collection covers a broad range of
+        categories. Each point of
+        interest is precisely geo-tagged and supplemented with relevant metadata to ensure accuracy and usefulness.
+        <span class="d-block mt-2"></span>
+        With our State-Of-The-Art Digitally Managed Data Dispensary, accessing and utilizing our Point Of Interest
+        dataset is a seamless experience.
+        Our user-friendly platform allows you to explore and retrieve location-specific data with ease. Whether you're a
+        developer, researcher, or
+        business owner, our dataset offers valuable insights to enhance your projects and applications.
+        <span class="d-block mt-2"></span>
+        Join our network today and gain access to our comprehensive Point Of Interest collection. Empower your
+        location-based services, optimize
+        navigation algorithms, or enrich your applications with real-world data. Phoenix Labs is here to support your
+        endeavors and help you make
+        informed decisions using our ethically sourced and meticulously curated datasets.
+      </p>
+    </div>
+    <div class="m-4 p-3" id="syntheticData">
+      <h1 class="mt-4">Synthetic Data</h1>
+      <p class="text-justify">
+        <span class="d-block mt-2"></span>
+        Welcome to Phoenix Labs' Synthetic Data page! Our Synthetic Data collection provides a powerful resource for
+        individuals, businesses, and
+        organizations seeking versatile and customizable datasets. Synthetic data offers numerous advantages, including
+        the ability to generate data
+        that mimics real-world scenarios, while providing full control over its characteristics and distribution.
+        <span class="d-block mt-2"></span>
+        Our Synthetic Data collection covers various data types, including speech, text, image, and video. By leveraging
+        our State-Of-The-Art
+        Digitally Managed Data Dispensary, you can easily access and generate synthetic datasets tailored to your
+        specific requirements. Whether
+        you're training machine learning models, conducting simulations, or testing algorithms, our synthetic data
+        empowers you to create realistic
+        and scalable datasets.
+        <span class="d-block mt-2"></span>
+        At Phoenix Labs, we understand the importance of ethical and reliable data. Our synthetic data generation
+        process adheres to rigorous
+        quality standards, ensuring that the datasets we offer are accurate and representative of real-world scenarios.
+        By utilizing our Synthetic
+        Data collection, you can confidently drive innovation and advance your projects.
+        <span class="d-block mt-2"></span>
+        Join our network today and unlock the potential of synthetic data. With our cutting-edge tools and comprehensive
+        collection, you can enhance
+        your research, development, and testing processes. Experience the freedom and flexibility of working with
+        synthetic data, backed by Phoenix
+        Labs' commitment to delivering high-quality datasets for any use case.
+      </p>
+    </div>
+    <div class="p-4 d-flex justify-content-evenly">
+      <button type="button" class="btn btn-primary btn-lg m-auto">
+        <a style="color: aliceblue; text-decoration: none" href="/art.html">Back</a>
+      </button>
+      <button type="button" class="btn btn-primary btn-lg m-auto">
+        <a style="color: aliceblue; text-decoration: none" href="/datac.html">Enroll now</a>
+      </button>
+    </div>
+  </main>
+  <div class="footer-dark">
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-md-3 item">
+            <h3>Services</h3>
+            <ul>
+              <li><a href="/art.html">Artificial Intelligence Center</a></li>
+              <li><a href="/crypto">Crypto Technology Center</a></li>
+              <li><a href="/web.html">Web/Mobile Application Suite</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-7 col-md-3 item">
+            <h3>About</h3>
+            <ul>
+              <li><a href="#">Company</a></li>
+              <li><a href="#">Team</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </div>
+          <div class="col-md-6 item text">
+            <h3>Pheonix Labs</h3>
+            <p>
+              At Phoenix Labs, we are curious, innovative, and bold. We are testing and exceeding the limitations of
+              what technology can do.
+              We are a growing team of people with big ideas, who are both thinkers and doers. Our people move quickly
+              and thrive on working
+              towards solutions to the problems that plague societies across the globe..
+            </p>
+          </div>
+          <div class="col item social">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i> </a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-solid fa-envelope"></i></a>
+          </div>
         </div>
-        <script
-            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
-            integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
-            crossorigin="anonymous"
-        ></script>
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
-            integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
-            crossorigin="anonymous"
-        ></script>
-        <script src="https://kit.fontawesome.com/39aab1f952.js" crossorigin="anonymous"></script>
-    </body>
+        <p class="copyright">Phoenix Labs © 2023</p>
+      </div>
+    </footer>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+    integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+    integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/39aab1f952.js" crossorigin="anonymous"></script>
+</body>
+
 </html>
