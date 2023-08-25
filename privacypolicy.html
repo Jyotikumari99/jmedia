@@ -1,282 +1,417 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Privacy Policy</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+            crossorigin="anonymous"
+        />
+        <style>
+            .logo {
+                width: 4%;
+                aspect-ratio: 1/1;
+                margin-right: 1.5rem;
+            }
+            .container > nav {
+                font-size: 1.2rem;
+                background-color: rgb(255, 255, 255);
+                padding: 1rem 3rem;
+            }
+            .navbar-expand-lg .navbar-nav .nav-link {
+                margin: 0rem 1.3rem;
+            }
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy</title>
-  <link rel="stylesheet" href="public/style.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+            .footer-dark {
+                padding: 50px 0;
+                color: #f0f9ff;
+                background-color: #282d32;
+                font-size: 1.4rem;
+                /* height: 27rem; */
+                margin-top: -2rem;
+            }
 
-  <style>
-    .card {
-      border: 0;
-      box-shadow: 4px 0 10px #000000;
-      padding: 10px;
-    }
+            .footer-dark h3 {
+                margin-top: 0;
+                margin-bottom: 12px;
+                font-weight: bold;
+                font-size: 16px;
+            }
 
-    .policy {
-      margin-top: 200px;
-    }
-  </style>
-</head>
+            .footer-dark ul {
+                padding: 0;
+                list-style: none;
+                line-height: 1.6;
+                font-size: 14px;
+                margin-bottom: 0;
+            }
 
-<body>
-  <div class="contain">
-    <nav class="navbar navbar-expand-lg navbar-light bg-ligh fixed-top">
-      <div class="container-fluid">
-        <img src="/images/logo.png" alt="" srcset="" />
-        <a class="navbar-brand" href="#">Phoenix Labs</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/">Home</a>
-            </li>
-          </ul>
+            .footer-dark ul a {
+                color: inherit;
+                text-decoration: none;
+                opacity: 0.6;
+                font-size: 1.4rem;
+                margin: 2rem 0rem;
+            }
+
+            .footer-dark ul a:hover {
+                opacity: 0.8;
+            }
+
+            @media (max-width: 767px) {
+                .footer-dark .item:not(.social) {
+                    text-align: center;
+                    padding-bottom: 20px;
+                }
+                .contain .vb {
+                    width: 100%;
+                    height: 20%;
+                }
+                .logo {
+                    width: 12%;
+                }
+            }
+
+            .footer-dark .item.text {
+                margin-bottom: 36px;
+            }
+
+            @media (max-width: 767px) {
+                .footer-dark .item.text {
+                    margin-bottom: 0;
+                }
+            }
+
+            .footer-dark .item.text p {
+                opacity: 0.6;
+                margin-bottom: 0;
+            }
+
+            .footer-dark .item.social {
+                text-align: center;
+            }
+
+            @media (max-width: 991px) {
+                .footer-dark .item.social {
+                    text-align: center;
+                    margin-top: 20px;
+                }
+            }
+
+            .footer-dark .item.social > a {
+                font-size: 20px;
+                width: 36px;
+                height: 36px;
+                line-height: 36px;
+                display: inline-block;
+                text-align: center;
+                border-radius: 50%;
+                box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.4);
+                margin: 0 8px;
+                color: #fff;
+                opacity: 0.75;
+            }
+
+            .footer-dark .item.social > a:hover {
+                opacity: 0.9;
+            }
+
+            .copyright {
+                text-align: center;
+                padding-top: 24px;
+                opacity: 0.3;
+                font-size: 13px;
+                margin-bottom: 0;
+            }
+            /*privacy policy*/
+            .footer-dark .unicare {
+                text-decoration: none;
+                color: #f0f9ff;
+                text-align: center;
+                padding-top: 20px;
+                opacity: 0.9;
+                font-size: 15px;
+                margin-bottom: 0;
+            }
+            main {
+                margin: 90px 0;
+                background-color: #ffffff;
+            }
+            .heading_section {
+                height: 200px;
+                background-color: rgb(255, 0, 100);
+                border-radius: 0px 0px 99% 99%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            .heading_section > .main_heading {
+                display: block;
+                font-size: 3rem;
+                font-weight: bold;
+            }
+            .heading_section > .sub_heading {
+                font-size: 1.2rem;
+                display: block;
+            }
+            .content_div {
+                height: fit-content;
+            }
+            .content_div > .content_card {
+                width: 80%;
+                margin: 20px auto;
+                box-shadow: 0 0 10px #000000;
+                border-radius: 10px;
+                padding: 3rem;
+            }
+            section {
+                margin: 10px 0 5px 0;
+                text-align: justify;
+            }
+            .heading {
+                font-weight: 700;
+                font-size: 1.8rem;
+            }
+            .sub_heading {
+                font-weight: 550;
+                font-size: 1.5rem;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-ligh fixed-top">
+                <div class="container-fluid">
+                    <img class="logo" src="/images/logo.png" alt="Logo" />
+                    <a class="navbar-brand" href="#">Phoenix Labs</a>
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="/">Home</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
         </div>
-      </div>
-    </nav>
-  </div>
-  <div class="policy card m-5 p-4">
-    <h2 class="mt-4">UniCare® Privacy Policy</h2>
-    <p>
-      <br />
-      Effective Date: August 18, 2023
-      <br />
-      <br />
-      Thank you for choosing UniCare, a revolutionary AI-powered phone
-      application created by Phoenix Labs. This Privacy Policy explains how we
-      collect, use, disclose, and protect your personal information as you use
-      our application. We are committed to ensuring the privacy and security
-      of your information and complying with applicable data protection laws.
-      Please carefully read this Privacy Policy to understand our practices
-      regarding your personal information.
-    </p>
-    <p>
-      <b>1. Information We Collect</b>
-      <br /><br />
-      <b> 1.1. Personal Information:</b>
-      <br /><br />
-      <br />
-      We collect various categories of personal information, including but not
-      limited to:
-      <br /><br />
-      - Contact information: This includes your name, email address, and phone
-      number, which we use to communicate with you and provide support.
-      <br /><br />
-      - Demographic information: To better understand our user base and cater
-      to diverse needs, we may collect demographic data such as age, gender,
-      ethnicity, and language preferences.
-      <br /><br />
-      - Health-related information: To provide effective health management
-      services, we may collect information about your medical history,
-      symptoms, medications, and other health-related data.
-      <br /><br />
-      - Biometric data: With your explicit consent, UniCare may utilize
-      advanced technologies such as retinal scanning or biometric sensors to
-      collect data for personalized health assessments and monitoring.
-      <br /><br />
-      - User-generated content: When you interact with UniCare, you may
-      provide additional information through comprehensive questionnaires or
-      other means. This information helps us tailor our services to your
-      specific needs.
-      <br /><br />
-      <b> 1.2. Automatically Collected Information:</b>
-      <br /><br />
-      As you use UniCare, certain information is automatically collected,
-      including but not limited to:
-      <br /><br />
-      - Device information: We collect data about the type of device you use,
-      operating system, unique device identifiers, and other technical
-      information necessary for providing our services.
-      <br /><br />
-      - Log data: Our servers automatically record certain information when
-      you access or use UniCare. This includes your IP address, timestamps,
-      interactions within the application, and other system activity logs.
-      <br /><br />
-      - Usage information: We collect data on your use of UniCare, such as the
-      features and functionalities you access, preferences, and settings. This
-      helps us improve our services and enhance your experience.
-      <br /><br />
-      - Location information: With your explicit consent, we may collect and
-      process your location data to provide location-specific services or
-      personalized health recommendations.
-      <br /><br />
-      <b> 2. Use of Information</b>
-      <br /><br />
-      We use the collected information for the following purposes:
-      <br /><br />
-      <b> 2.1. Providing Services:</b>
-      <br /><br />
-      We use your personal information to deliver personalized health
-      management services tailored to your needs and preferences. This
-      includes analyzing and interpreting the collected data to generate
-      insights, recommendations, and reminders to help you effectively manage
-      your health.
-      <br /><br />
-      <b> 2.2. Improving and Developing the Application:</b>
-      <br /><br />
-      We analyze the collected information to enhance user experience,
-      optimize application performance, and develop new features and
-      functionalities. This analysis may involve data aggregation and
-      anonymization to generate insights about health trends and patterns.
-      <br /><br />
-      <b> 2.3. Communication and Support:</b>
-      <br /><br />
-      We may use your contact information to respond to your inquiries,
-      feedback, and support requests. Additionally, we may send you important
-      notices, updates, and administrative messages related to your use of
-      UniCare. We may also provide you with relevant information about our
-      services, promotions, or events with your consent.
-      <br /><br />
-      <b> 3. Data Sharing and Disclosure</b>
-      <br /><br />
-      We may share your personal information in the following circumstances:
-      3.1. Service Providers:
-      <br /><br />
-      We may engage trusted third-party service providers to perform certain
-      functions on our behalf. These providers may include hosting and data
-      storage providers, data analysis and processing companies, customer
-      support services, and marketing partners. These service providers are
-      contractually obligated to handle your personal information
-      confidentially and securely and are only permitted to use it for the
-      specific purposes outlined in our agreements with them.
-      <br /><br />
-      <b> 3.2. Legal Requirements:</b>
-      <br /><br />
-      We may disclose your personal information if required to do so by law,
-      regulation, legal process, or governmental request. This includes
-      responding to lawful requests from public authorities to meet national
-      security or law enforcement requirements.
-      <br /><br />
-      <b> 3.3. User Consent:</b>
-      <br /><br />
-      We may share your personal information with your explicit consent. For
-      example, if you choose to share your data with healthcare professionals
-      or participate in research studies, we may disclose relevant information
-      as per your preferences and consent.
-      <br /><br />
-      <b> 4. Data Security </b>
-      <br /><br />
-      We are committed to protecting the security of your personal
-      information. We implement appropriate technical and organizational
-      measures to safeguard your data from unauthorized access, disclosure,
-      alteration, or destruction. These measures include encryption, access
-      controls, secure data storage, and regular security assessments.
-      However, please note that no data transmission or storage system can
-      guarantee complete security. While we strive to protect your
-      information, we cannot guarantee its absolute security.
-      <br /><br />
-      <b> 5. Data Retention</b>
-      <br /><br />
-      We retain your personal information for as long as necessary to fulfill
-      the purposes outlined in this Privacy Policy unless a longer retention
-      period is required or permitted by law. We will securely delete or
-      anonymize your information when it is no longer needed.
-      <br /><br />
-      <b> 6. Your Rights</b>
-      <br /><br />
-      You have certain rights regarding your personal information, which may
-      include the right to access, correct, delete, or restrict its
-      processing. You may also have the right to withdraw consent or object to
-      the processing of your information. To exercise your rights or make any
-      inquiries regarding your personal information, please contact us using
-      the information provided in Section 8.
-      <br /><br />
-      <b> 7. Children&#39;s Privacy </b><br /><br />
-      UniCare is intended for users who are at least 18 years old. We do not
-      knowingly collect personal information from individuals under the age of
-      18. If we become aware that we have inadvertently collected personal
-      information from a child without parental consent, we will take prompt
-      steps to delete such information from our systems.
-      <br /><br />
-      <b> 8. Contact Us</b>
-      <br /><br />
-      If you have any questions, concerns, or requests regarding this Privacy
-      Policy or our privacy practices, please contact us at:
-      <br /><br />
-      Anastasia Short,
-      <a href="mailto:aeshort@jmediacorp.com">aeshort@jmediacorp.com</a>
-      <br /><br />
-      We will endeavor to respond to your inquiries and address your concerns
-      in a timely and appropriate manner.
-      <br /><br />
-      <b> 9. Changes to the Privacy Policy </b>
-      <br /><br />
-      We may update this Privacy Policy from time to time to reflect changes
-      in our practices or legal requirements. We will notify you of any
-      material changes by posting the updated Privacy Policy within the
-      UniCare application or through other communication channels. We
-      encourage you to periodically review this Privacy Policy to stay
-      informed about how we collect, use, and protect your personal
-      information.
-      <br /><br />
-      By using UniCare, you signify your acceptance of this Privacy Policy. If
-      you do not agree to this Privacy Policy, please do not use UniCare.
-    </p>
-  </div>
-  <div class="footer-dark">
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-6 col-md-3 item">
-            <h4>Services</h4>
-            <ul>
-              <li>
-                <a href="/art.html" class="fs-6">Artificial Intelligence Center</a>
-              </li>
-              <li>
-                <a href="/crypto.html" class="fs-6">Crypto Technology Center</a>
-              </li>
-              <li>
-                <a href="/web.html" class="fs-6">Web/Mobile Application Suite</a>
-              </li>
-              <li><a href="/vision.html" class="fs-6">Our Vision</a></li>
-            </ul>
-          </div>
-          <div class="col-sm-7 col-md-3 item">
-            <h4>About</h4>
-            <ul>
-              <li><a href="#" class="fs-6">Company</a></li>
-              <li><a href="#" class="fs-6">Team</a></li>
-              <li><a href="#" class="fs-6">Careers</a></li>
-            </ul>
-          </div>
-          <div class="col-md-6 item text">
-            <h4>Phoenix Labs</h4>
-            <p class="fs-6">
-              At Phoenix Labs, we are curious, innovative, and bold. We are
-              testing and exceeding the limitations of what technology can do.
-              We are a growing team of people with big ideas, who are both
-              thinkers and doers. Our people move quickly and thrive on
-              working towards solutions to the problems that plague societies
-              across the globe..
-            </p>
-          </div>
-          <div class="col item social">
-            <a href="#"><i class="fa-brands fa-facebook"></i></a><a href="#"><i class="fa-brands fa-twitter"></i></a><a
-              href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-solid fa-envelope"></i></a>
-          </div>
+        <main>
+            <div class="heading_section">
+                <span class="main_heading">UniCare® Privacy Policy</span>
+                <span class="sub_heading">Effective Date : August 18 2023</span>
+            </div>
+            <div class="content_div">
+                <div class="content_card">
+                    <section>
+                        Thank you for choosing UniCare, a revolutionary AI-powered phone application created by Phoenix Labs. This Privacy Policy explains how
+                        we collect, use, disclose, and protect your personal information as you use our application. We are committed to ensuring the privacy
+                        and security of your information and complying with applicable data protection laws. Please carefully read this Privacy Policy to
+                        understand our practices regarding your personal information.
+                    </section>
+                    <section>
+                        <p class="heading">1. Information We Collect</p>
+                        <p class="sub_heading">1.1. Personal Information</p>
+                        <p>We collect various categories of personal information, including but not limited to:</p>
+                        <p>
+                            <b>- Contact information: </b> This includes your name, email address, and phone number, which we use to communicate with you and
+                            provide support. <br />
+                            <b> - Demographic information:</b> To better understand our user base and cater to diverse needs, we may collect demographic data
+                            such as age, gender, ethnicity, and language preferences. <br />
+                            <b> - Health-related information: </b>To provide effective health management services, we may collect information about your medical
+                            history, symptoms, medications, and other health-related data. <br />
+                            <b> - Biometric data:</b> With your explicit consent, UniCare may utilize advanced technologies such as retinal scanning or
+                            biometric sensors to collect data for personalized health assessments and monitoring. <br />
+                            <b>- User-generated content: </b> When you interact with UniCare, you may provide additional information through comprehensive
+                            questionnaires or other means. This information helps us tailor our services to your specific needs.
+                        </p>
+                        <p class="sub_heading">1.2. Automatically Collected Information</p>
+                        <p>
+                            As you use UniCare, certain information is automatically collected, including but not limited to:
+                            <br />
+                            <b> - Device information:</b> We collect data about the type of device you use, operating system, unique device identifiers, and
+                            other technical information necessary for providing our services.
+                            <br />
+                            <b> - Log data: </b>Our servers automatically record certain information when you access or use UniCare. This includes your IP
+                            address, timestamps, interactions within the application, and other system activity logs.
+                            <br />
+                            <b> - Usage information:</b> We collect data on your use of UniCare, such as the features and functionalities you access,
+                            preferences, and settings. This helps us improve our services and enhance your experience.
+                            <br />
+                            <b> - Location information:</b> With your explicit consent, we may collect and process your location data to provide
+                            location-specific services or personalized health recommendations.
+                        </p>
+                    </section>
+                    <section>
+                        <p class="heading">2. Use of Information</p>
+                        <p>We use the collected information for the following purposes:</p>
+                        <p class="sub_heading">2.1. Providing Services</p>
+                        <p>
+                            We use your personal information to deliver personalized health management services tailored to your needs and preferences. This
+                            includes analyzing and interpreting the collected data to generate insights, recommendations, and reminders to help you effectively
+                            manage your health.
+                        </p>
+                        <p class="sub_heading">2.2. Improving and Developing the Application</p>
+                        <p>
+                            We analyze the collected information to enhance user experience, optimize application performance, and develop new features and
+                            functionalities. This analysis may involve data aggregation and anonymization to generate insights about health trends and patterns.
+                        </p>
+                        <p class="sub_heading">2.3. Communication and Support</p>
+                        <p>
+                            We may use your contact information to respond to your inquiries, feedback, and support requests. Additionally, we may send you
+                            important notices, updates, and administrative messages related to your use of UniCare. We may also provide you with relevant
+                            information about our services, promotions, or events with your consent.
+                        </p>
+                    </section>
+                    <section>
+                        <p class="heading">3. Data Sharing and Disclosure</p>
+                        <p>We may share your personal information in the following circumstances:</p>
+                        <p class="sub_heading">3.1. Service Providers</p>
+                        <p>
+                            We may engage trusted third-party service providers to perform certain functions on our behalf. These providers may include hosting
+                            and data storage providers, data analysis and processing companies, customer support services, and marketing partners. These service
+                            providers are contractually obligated to handle your personal information confidentially and securely and are only permitted to use
+                            it for the specific purposes outlined in our agreements with them.
+                        </p>
+                        <p class="sub_heading">3.2. Legal Requirements</p>
+                        <p>
+                            We may disclose your personal information if required to do so by law, regulation, legal process, or governmental request. This
+                            includes responding to lawful requests from public authorities to meet national security or law enforcement requirements.
+                        </p>
+                        <p class="sub_heading">3.3. User Consent</p>
+                        <p>
+                            We may share your personal information with your explicit consent. For example, if you choose to share your data with healthcare
+                            professionals or participate in research studies, we may disclose relevant information as per your preferences and consent.
+                        </p>
+                    </section>
+                    <section>
+                        <p class="heading">4. Data Security</p>
+                        <p>
+                            We are committed to protecting the security of your personal information. We implement appropriate technical and organizational
+                            measures to safeguard your data from unauthorized access, disclosure, alteration, or destruction. These measures include encryption,
+                            access controls, secure data storage, and regular security assessments. However, please note that no data transmission or storage
+                            system can guarantee complete security. While we strive to protect your information, we cannot guarantee its absolute security.
+                        </p>
+                    </section>
+                    <section>
+                        <p class="heading">5. Data Retention</p>
+                        <p>
+                            We retain your personal information for as long as necessary to fulfill the purposes outlined in this Privacy Policy unless a longer
+                            retention period is required or permitted by law. We will securely delete or anonymize your information when it is no longer needed.
+                        </p>
+                    </section>
+                    <section>
+                        <p class="heading">6. Your Rights</p>
+                        <p>
+                            You have certain rights regarding your personal information, which may include the right to access, correct, delete, or restrict its
+                            processing. You may also have the right to withdraw consent or object to the processing of your information. To exercise your rights
+                            or make any inquiries regarding your personal information, please contact us using the information provided in Section 8.
+                        </p>
+                    </section>
+                    <section>
+                        <p class="heading">7. Children&#39;s Privacy</p>
+                        <p>
+                            UniCare is intended for users who are at least 18 years old. We do not knowingly collect personal information from individuals under
+                            the age of 18. If we become aware that we have inadvertently collected personal information from a child without parental consent,
+                            we will take prompt steps to delete such information from our systems.
+                        </p>
+                    </section>
+                    <section>
+                        <p class="heading">8. Contact Us</p>
+                        <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our privacy practices, please contact us at:</p>
+                        <p>
+                            Anastasia Short,
+                            <a href="mailto:aeshort@jmediacorp.com">aeshort@jmediacorp.com</a>
+                        </p>
+                        <p>We will endeavor to respond to your inquiries and address your concerns in a timely and appropriate manner.</p>
+                    </section>
+                    <section>
+                        <p class="heading">9. Changes to the Privacy Policy</p>
+                        <p>
+                            We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. We will notify you of
+                            any material changes by posting the updated Privacy Policy within the UniCare application or through other communication channels.
+                            We encourage you to periodically review this Privacy Policy to stay informed about how we collect, use, and protect your personal
+                            information.
+                        </p>
+                        <p>
+                            By using UniCare, you signify your acceptance of this Privacy Policy. If you do not agree to this Privacy Policy, please do not use
+                            UniCare.
+                        </p>
+                    </section>
+                </div>
+            </div>
+        </main>
+        <div class="footer-dark">
+            <footer>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-3 item">
+                            <h4>Services</h4>
+                            <ul>
+                                <li>
+                                    <a href="/art.html" class="fs-6">Artificial Intelligence Center</a>
+                                </li>
+                                <li>
+                                    <a href="/crypto.html" class="fs-6">Crypto Technology Center</a>
+                                </li>
+                                <li>
+                                    <a href="/web.html" class="fs-6">Web/Mobile Application Suite</a>
+                                </li>
+                                <li><a href="/vision.html" class="fs-6">Our Vision</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-7 col-md-3 item">
+                            <h4>About</h4>
+                            <ul>
+                                <li><a href="#" class="fs-6">Company</a></li>
+                                <li><a href="#" class="fs-6">Team</a></li>
+                                <li><a href="#" class="fs-6">Careers</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 item text">
+                            <h4>Phoenix Labs</h4>
+                            <p class="fs-6">
+                                At Phoenix Labs, we are curious, innovative, and bold. We are testing and exceeding the limitations of what technology can do.
+                                We are a growing team of people with big ideas, who are both thinkers and doers. Our people move quickly and thrive on working
+                                towards solutions to the problems that plague societies across the globe..
+                            </p>
+                        </div>
+                        <div class="col item social">
+                            <a href="#"><i class="fa-brands fa-facebook"></i></a><a href="#"><i class="fa-brands fa-twitter"></i></a
+                            ><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-solid fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <a href="privacypolicy.html" class="unicare">UniCare® Privacy Policy</a>
+                    <p class="copyright">Phoenix Labs © 2023</p>
+                </div>
+            </footer>
         </div>
-        <a href="privacypolicy.html" class="unicare">UniCare® Privacy Policy</a>
-        <p class="copyright">Phoenix Labs © 2023</p>
-      </div>
-    </footer>
-  </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
-    integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
-    integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
-    crossorigin="anonymous"></script>
-  <script src="https://kit.fontawesome.com/39aab1f952.js" crossorigin="anonymous"></script>
-</body>
-
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+            integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+            integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+            crossorigin="anonymous"
+        ></script>
+        <script src="https://kit.fontawesome.com/39aab1f952.js" crossorigin="anonymous"></script>
+    </body>
 </html>
