@@ -58,23 +58,6 @@
             width: 50%;
         }
 
-        #video,
-        canvas {
-            background: #fff;
-            object-fit: cover;
-            width: 30%;
-            aspect-ratio: 1/1;
-            border-radius: 50%;
-            box-shadow: 0 0 100px -50px #000;
-        }
-
-        @media screen and (max-width: 562px) {
-            #video,
-            canvas {
-                width: 80%;
-            }
-        }
-
         .card {
             border: 0;
             box-shadow: 4px 0 10px #000000;
@@ -121,23 +104,17 @@
                     will change our future. Our AI Labs Platform consists of three different laboratories that were created to focus on real-world problems that
                     require real-world solutions.
                 </p>
-                <div class="m-4 d-flex justify-content-center">
+                <div class="m-4 d-flex justify-content-between ps-5 pe-5">
+                    <button onclick="enrollNewUser()" class="btn btn-primary btn-lg">Enroll New User</button>
+                    <button onclick="authenticateUser()" class="btn btn-primary btn-lg">Authenticate User</button>
                     <button type="button" class="btn btn-primary btn-lg">
                         <a style="color: aliceblue; text-decoration: none" href="/datac.html">Learn more</a>
                     </button>
                 </div>
-                <div class="camera">
-                    <video autoplay id="video" muted></video>
-                </div>
-                <div class="text-center fs-5 fw-bold">Align your face with camera for face recognition</div>
-                <div class="d-flex justify-content-center m-5">
-                    <div>
-                        <button class="btn btn-primary p-2" onclick="(e)=>e.preventDefault()">Login</button>
-                    </div>
-                </div>
             </div>
         </main>
-        <div class="ailabslist card m-5 p-4">
+        <div id="faceio-modal"></div>
+        <div class="m-5 p-4">
             <p>
                 Welcome to AI Labs at Phoenix Labs, where innovation knows no bounds, and the future unfolds before our eyes. Our AI Labs encompass a multitude
                 of groundbreaking research and development projects aimed at revolutionizing various industries. Each lab is a testament to our unwavering
@@ -168,45 +145,80 @@
             </ul>
         </div>
         <div class="footer-dark">
-            <footer>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-6 col-md-3 item">
-                            <h3>Services</h3>
-                            <ul>
-                                <li><a href="/art.html">Artificial Intelligence Center</a></li>
-                                <li><a href="/crypto">Crypto Technology Center</a></li>
-                                <li><a href="/web.html">Web/Mobile Application Suite</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-sm-7 col-md-3 item">
-                            <h3>About</h3>
-                            <ul>
-                                <li><a href="#">Company</a></li>
-                                <li><a href="#">Team</a></li>
-                                <li><a href="#">Careers</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-md-6 item text">
-                            <h3>Phoenix Labs</h3>
-                            <p>
-                                At Phoenix Labs, we are curious, innovative, and bold. We are testing and exceeding the limitations of what technology can do.
-                                We are a growing team of people with big ideas, who are both thinkers and doers. Our people move quickly and thrive on working
-                                towards solutions to the problems that plague societies across the globe..
-                            </p>
-                        </div>
-                        <div class="col item social">
-                            <a href="#"><i class="fa-brands fa-facebook"></i></a><a href="#"><i class="fa-brands fa-twitter"></i></a
-                            ><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-solid fa-envelope"></i></a>
-                        </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="/art.html">Artificial Intelligence Center</a></li>
+                            <li><a href="/crypto">Crypto Technology Center</a></li>
+                            <li><a href="/web.html">Web/Mobile Application Suite</a></li>
+                        </ul>
                     </div>
-                    <p>
-                        <a href="privacypolicy.html" class="unicare">UniCare® Privacy Policy</a>
-                    </p>
-                    <p class="copyright">Phoenix Labs©2023</p>
+                    <div class="col-sm-7 col-md-3 item">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a href="#">Company</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 item text">
+                        <h3>Phoenix Labs</h3>
+                        <p>
+                            At Phoenix Labs, we are curious, innovative, and bold. We are testing and exceeding the limitations of what technology can do. We
+                            are a growing team of people with big ideas, who are both thinkers and doers. Our people move quickly and thrive on working towards
+                            solutions to the problems that plague societies across the globe..
+                        </p>
+                    </div>
+                    <div class="col item social">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a><a href="#"><i class="fa-brands fa-twitter"></i></a
+                        ><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
                 </div>
-            </footer>
+                <p>
+                    <a href="privacypolicy.html" class="unicare">UniCare® Privacy Policy</a>
+                </p>
+                <p class="copyright">Phoenix Labs©2023</p>
+            </div>
         </div>
+        <script src="https://cdn.faceio.net/fio.js"></script>
+        <script type="text/javascript">
+            const faceio = new faceIO("fioaff5d");
+            function enrollNewUser() {
+                faceio
+                    .enroll({
+                        locale: "auto",
+                        payload: {
+                            whoami: 123456,
+                            email: "john.doe@example.com",
+                        },
+                    })
+                    .then((userInfo) => {
+                        alert(
+                            `User Successfully Enrolled! Details:
+                    Unique Facial ID: ${userInfo.facialId}
+                    Enrollment Date: ${userInfo.timestamp}
+                    Gender: ${userInfo.details.gender}
+                    Age Approximation: ${userInfo.details.age}`
+                        );
+                        console.log(userInfo);
+                    })
+                    .catch((errCode) => {});
+            }
+            function authenticateUser() {
+                faceio
+                    .authenticate({
+                        locale: "auto",
+                    })
+                    .then((userData) => {
+                        console.log("Success, user identified");
+                        console.log("Linked facial Id: " + userData.facialId);
+                        console.log("Payload: " + JSON.stringify(userData.payload));
+                    })
+                    .catch((errCode) => {});
+            }
+        </script>
 
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
